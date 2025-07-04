@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"  
+             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"  
+             xmlns:local="clr-namespace:MauiChat;assembly=MauiChat"  
+             x:Class="MauiChat.MainPage"
+             x:DataType="local:ChatViewModel">
+
+    <ContentPage.BindingContext>
+        <local:ChatViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <local:ContentPageBehavior/>
+    </ContentPage.Behaviors>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <core:SfChipGroup x:Name="chipGroup" x:Key="chipGroup" ChipStroke="Transparent" ChipStrokeThickness="0" ChipCornerRadius="0" ItemsSource="{Binding PopupItems}">
+                <core:SfChipGroup.ChipLayout>
+                    <StackLayout/>
+                </core:SfChipGroup.ChipLayout>
+                <core:SfChipGroup.ItemTemplate>
+                    <DataTemplate x:DataType="local:Model">
+                        <Grid ColumnDefinitions="Auto, Auto" ColumnSpacing="10" Padding="16, 8">
+                            <Label Text="{Binding ImageSource}" FontFamily="MaterialAssets" FontSize="14"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Label Grid.Column="1" Text="{Binding Text}" FontSize="14"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </core:SfChipGroup.ItemTemplate>
+            </core:SfChipGroup>
+            
+            <popup:SfPopup x:Name="sfPopup" x:Key="sfPopup" ShowFooter="False" ShowHeader="False" AutoSizeMode="Both" Padding="10">
+                <popup:SfPopup.PopupStyle>
+                    <popup:PopupStyle PopupBackground="#FFFBFE" OverlayColor="Transparent" CornerRadius="0" HasShadow="True"/>
+                </popup:SfPopup.PopupStyle>
+                <popup:SfPopup.ContentTemplate>
+                    <DataTemplate>
+                        <ContentView Content="{StaticResource chipGroup}"/>
+                    </DataTemplate>
+                </popup:SfPopup.ContentTemplate>
+            </popup:SfPopup>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        
+        <syncfusion:SfChat x:Name="sfChat"
+                       Messages="{Binding Messages}"
+                       CurrentUser="{Binding CurrentUser}"
+                       ShowAttachmentButton="True"/>
+    </ContentPage.Content>
+
+</ContentPage>
