@@ -96,9 +96,9 @@ namespace MauiChat
                     }
                     else
                     {
-                        if (this.popup != null)
+                        if (this.popup != null && this.popup.IsOpen)
                         {
-                            this.popup!.IsOpen = false;
+                            this.popup.IsOpen = false;
                         }
                     }
                 }
@@ -128,7 +128,10 @@ namespace MauiChat
                         Source = ImageSource.FromStream(() => new MemoryStream(image.ImageData)),
                     });
 
-                    this.popup.IsOpen = false;
+                    if (this.popup.IsOpen)
+                    {
+                        this.popup.IsOpen = false;
+                    }
                 }
             }
         }

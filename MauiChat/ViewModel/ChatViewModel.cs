@@ -109,7 +109,7 @@ namespace MauiChat
             this.messages.Add(new TextMessage()
             {
                 Author = this.Stevan,
-                Text = "What kind of application is it and when are we going to launch?.",
+                Text = "What kind of application is it and when are we going to launch?",
                 DateTime = DateTime.Now
             });
         }
