@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiChat", "MauiChat.csproj", "{EA4EF2FA-9FD4-43D3-879E-A31796FF7B7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA4EF2FA-9FD4-43D3-879E-A31796FF7B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4EF2FA-9FD4-43D3-879E-A31796FF7B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4EF2FA-9FD4-43D3-879E-A31796FF7B7D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EA4EF2FA-9FD4-43D3-879E-A31796FF7B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4EF2FA-9FD4-43D3-879E-A31796FF7B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97F2C274-D763-4F99-B6BA-D4DC8B7BE104}
+	EndGlobalSection
+EndGlobal
