@@ -64,6 +64,8 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.10.196-beta" />
 		<PackageReference Include="Syncfusion.Maui.Chat" Version="*" />
+		<PackageReference Include="Syncfusion.Maui.Core" Version="*" />
+		<PackageReference Include="Syncfusion.Maui.Popup" Version="*" />
 	</ItemGroup>
 
 	<ItemGroup>
