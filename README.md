@@ -1,5 +1,7 @@
 # how-to-attach-image-from-gallery-in-.net-maui-chat
 
+This demo explains about how to attach image from gallery and update in a local SQLite database in .NET MAUI Chat(SfChat).
+
 ## Sample
 
 ```xaml
